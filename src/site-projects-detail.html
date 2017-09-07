@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../bower_components/polymer/polymer-element.html">
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/google-youtube/google-youtube.html">
@@ -105,7 +107,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!--
       app-route provides the name of the category and the contents.
     -->
-    <app-route route="[[route]]" pattern="/:project" data="{{routeData}}"></app-route>
+    <app-route
+        route="[[route]]"
+        pattern="/:project"
+        data="{{routeData}}"></app-route>
 
     <!--
       site-data-provider provides the item data for a given category and item name.
@@ -113,7 +118,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         routeData.category (e.g., publications)
         rounteData.item (e.g., Array with name : 3d_reconstruction)
     -->
-    <site-data-provider id="categoryData" category-name="projects" item-name="[[routeData.project]]" item="{{project}}" failure="{{failure}}"></site-data-provider>
+    <site-data-provider
+        id="categoryData"
+        category-name="projects"
+        item-name="[[routeData.project]]"
+        item="{{project}}"
+        failure="{{failure}}"></site-data-provider>
 
     <div id="content" hidden$="[[failure]]">
       <site-image alt="[[project.title]]" src="[[project.largeImage]]">        
@@ -126,7 +136,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div id="video">
           <dom-if if="[[project.videoId]]">
             <template>
-              <google-youtube video-id="[[project.videoId]]" width="100%" height="315px" rel="0" start="0" autoplay="0">
+              <google-youtube
+                video-id="[[project.videoId]]"
+                width="100%"
+                height="315px"
+                rel="0"
+                start="0"
+                autoplay="0">
               </google-youtube>
             </template>
           </dom-if>
@@ -141,7 +157,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       site-network-warning shows a warning message when the items can't be rendered due
       to network conditions.
     -->
-    <site-network-warning hidden$="[[!failure]]" offline="[[offline]]" on-try-reconnect="_tryReconnect"></site-network-warning>
+    <site-network-warning
+        hidden$="[[!failure]]"
+        offline="[[offline]]"
+        on-try-reconnect="_tryReconnect"></site-network-warning>
 
   </template>
 

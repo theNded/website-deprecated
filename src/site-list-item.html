@@ -1,0 +1,131 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="site-button.html">
+<dom-module id="site-list-item">
+
+  <template>
+
+    <style include="site-common-styles site-button">    
+
+      :host {
+        margin: 0 48px;
+        text-align: justify;
+      }
+         
+      h1 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 0;
+        color: var(--app-primary-color);
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 28px;
+        margin: 0;
+        color: var(--app-primary-color);
+      }
+
+      .item-container {
+        @apply --layout-horizontal;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .desc-container {
+        margin: 20px 50px;
+        @apply --layout-flex-6;
+        @apply --layout-vertical;
+      }
+
+      site-image {
+        @apply --layout-flex-4;
+        margin: 20px;
+      }
+      
+      #desc {
+        color: var(--app-primary-color);
+        font-size: 16px;
+      }
+
+      @media (max-width: 767px) {
+        :host {
+          margin: 0 12px;
+        }
+        h1 {
+          padding: 10px 10%;
+        }
+
+        .item-container {
+          @apply --layout-vertical;
+          @apply --layout-center-justify;
+        }
+
+        site-image {
+          width: 80%;
+          margin: auto;
+        }
+      }
+
+
+    </style>
+    <h1>[[item.title]]</h1>
+
+    <div class="item-container">
+      <site-image src="[[item.image]]" alt="[[item.title]]"></site-image>
+      
+      <div class="desc-container">
+      <div id="desc"></div>
+      <template is="dom-if" if="[[item.button]]">
+        <site-button>
+          <a href="[[_getFileUrl(item)]]", target="_blank">[[item.button]]</a>
+        </site-button>
+        </template>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+
+    class SiteListItem extends Polymer.Element {
+
+      static get is() { return 'site-list-item'; }
+      static get properties() { return {
+        item: {
+          type: Object,
+          observer: '_itemChanged'
+        }
+      }}
+
+      _getFileUrl(item) {
+        return item.name ? ['/publications', item.name].join('/') + '.pdf': null;
+      }
+
+      _itemChanged(item) {
+        this._itemChangeDebouncer = Polymer.Debouncer.debounce(this._itemChangeDebouncer,
+            Polymer.Async.microTask, () => {
+
+              // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
+              // unescape it ("<br>") and set it as innerHTML.
+              let text = item ? item.shortDesc : '';
+              this.$.desc.innerHTML = text;
+            })
+      }
+    }
+
+    customElements.define(SiteListItem.is, SiteListItem);
+
+  </script>
+
+</dom-module>

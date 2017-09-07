@@ -1,0 +1,348 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><div hidden="" by-polymer-bundler=""><!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><dom-module id="site-common-styles">
+  <template>
+    <style>
+
+      [hidden] {
+        display: none !important;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      header > h1 {
+        margin: 0 0 4px 0;
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+
+      header > span {
+        color: var(--app-secondary-color);
+        font-size: 12px;
+      }
+
+      header > site-button[responsive] {
+        margin-top: 20px;
+      }
+
+      @media (max-width: 767px) {
+
+        header > h1 {
+          font-size: 1.1em;
+        }
+
+      }
+
+    </style>
+  </template>
+</dom-module>
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+--><dom-module id="site-list-item">
+
+  <template>
+
+    <style include="site-common-styles site-button">    
+
+      :host {
+        margin: 0 48px;
+        text-align: justify;
+      }
+         
+      h1 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 0;
+        color: var(--app-primary-color);
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 28px;
+        margin: 0;
+        color: var(--app-primary-color);
+      }
+
+      .item-container {
+        @apply --layout-horizontal;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .desc-container {
+        margin: 20px 50px;
+        @apply --layout-flex-6;
+        @apply --layout-vertical;
+      }
+
+      site-image {
+        @apply --layout-flex-4;
+        margin: 20px;
+      }
+      
+      #desc {
+        color: var(--app-primary-color);
+        font-size: 16px;
+      }
+
+      @media (max-width: 767px) {
+        :host {
+          margin: 0 12px;
+        }
+        h1 {
+          padding: 10px 10%;
+        }
+
+        .item-container {
+          @apply --layout-vertical;
+          @apply --layout-center-justify;
+        }
+
+        site-image {
+          width: 80%;
+          margin: auto;
+        }
+      }
+
+
+    </style>
+    <h1>[[item.title]]</h1>
+
+    <div class="item-container">
+      <site-image src="[[item.image]]" alt="[[item.title]]"></site-image>
+      
+      <div class="desc-container">
+      <div id="desc"></div>
+      <template is="dom-if" if="[[item.button]]">
+        <site-button>
+          <a href="[[_getFileUrl(item)]]" ,="" target="_blank">[[item.button]]</a>
+        </site-button>
+        </template>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+
+    class SiteListItem extends Polymer.Element {
+
+      static get is() { return 'site-list-item'; }
+      static get properties() { return {
+        item: {
+          type: Object,
+          observer: '_itemChanged'
+        }
+      }}
+
+      _getFileUrl(item) {
+        return item.name ? ['/publications', item.name].join('/') + '.pdf': null;
+      }
+
+      _itemChanged(item) {
+        this._itemChangeDebouncer = Polymer.Debouncer.debounce(this._itemChangeDebouncer,
+            Polymer.Async.microTask, () => {
+
+              // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
+              // unescape it ("<br>") and set it as innerHTML.
+              let text = item ? item.shortDesc : '';
+              this.$.desc.innerHTML = text;
+            })
+      }
+    }
+
+    customElements.define(SiteListItem.is, SiteListItem);
+
+  </script>
+
+</dom-module>
+</div><dom-module id="site-list">
+
+  <template>
+
+    <style include="site-common-styles">
+
+      .hero-image {
+        position: relative;
+        height: 320px;
+        overflow: hidden;
+        margin-bottom: 32px;
+      }
+
+      .hero-image {
+        --site-image-img: {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -9999px;
+          right: -9999px;
+          max-width: none;
+        };
+      }
+
+      .item-container {
+        @apply --layout-center-justified;
+        margin: 0 10%;
+      }
+
+      .item-container a {
+        display: block;
+        text-decoration: none;
+      }
+
+      @media (max-width: 767px) {
+        .hero-image {
+          height: 170px;
+        }
+      }
+
+    </style>
+
+    <!--
+      app-route provides the name of the category.
+    -->
+    <app-route route="[[route]]" pattern="/:category" data="{{routeData}}"></app-route>
+
+    <!--
+      site-data-provider provides the category data for a given category name.
+    -->
+    <site-data-provider id="categoryData" category-name="[[routeData.category]]" category="{{category}}" failure="{{failure}}"></site-data-provider>
+
+    <site-image alt="[[category.title]]" src="[[category.image]]" placeholder-img="[[category.placeholder]]" class="hero-image"></site-image>
+
+    <dom-repeat items="[[_getListItems(category.items)]]" initial-count="4">
+      <template>
+        <div class="item-container">
+          <a href$="[[_getItemHref(item)]]"><site-list-item item="[[item]]"></site-list-item></a>
+        </div>
+      </template>
+    </dom-repeat>
+
+    <!--
+      site-network-warning shows a warning message when the items can't be rendered due
+      to network conditions.
+    -->
+    <site-network-warning hidden$="[[!failure]]" offline="[[offline]]" on-try-reconnect="_tryReconnect"></site-network-warning>
+
+  </template>
+
+  <script>
+
+    class SiteList extends Polymer.Element {
+
+      static get is() { return 'site-list'; }
+
+      static get properties() { return {
+
+        category: Object,
+
+        route: Object,
+
+        routeData: Object,
+
+        visible: {
+          type: Boolean,
+          value: false
+        },
+
+        offline: {
+          type: Boolean,
+          observer: '_offlineChanged'
+        },
+
+        failure: Boolean
+
+      }}
+
+      static get observers() { return [
+        '_categoryChanged(category, visible)'
+      ]}
+
+      connectedCallback() {
+        super.connectedCallback();
+        this.isAttached = true;
+      }
+
+      disconnectedCallback() {
+        super.disconnectedCallback();
+        this.isAttached = false;
+      }
+
+      _getListItems(items) {
+        // Return placeholder items when the items haven't loaded yet.
+        return items || [{},{},{}];
+      }
+
+      _getItemHref(item) {
+        // By returning null when `itemId` is undefined, the href attribute won't be set and
+        // the link will be disabled.
+        return item.name ? ['/detail', this.category.name, item.name].join('/') : null;
+      }
+
+      _getPluralizedQuantity(quantity) {
+        if (!quantity) {
+          return '';
+        }
+        let pluralizedQ = quantity === 1 ? 'item' : 'items';
+        return  '(' + quantity + ' ' + pluralizedQ + ')';
+      }
+
+      _categoryChanged(category, visible) {
+        if (!visible) {
+          return;
+        }
+        this._changeSectionDebouncer = Polymer.Debouncer.debounce(this._changeSectionDebouncer,
+          Polymer.Async.microTask, () => {
+            if (category) {
+              // Notify the category and the page's title
+              this.dispatchEvent(new CustomEvent('change-section', {
+                bubbles: true, composed: true, detail: {
+                  category: category.name,
+                  title: category.title
+                }}));
+            } else {
+              this.dispatchEvent(new CustomEvent('show-invalid-url-warning', {
+                bubbles: true, composed: true}));
+            }
+          });
+      }
+
+      _tryReconnect() {
+        this.$.categoryData.refresh();
+      }
+
+      _offlineChanged(offline) {
+        if (!offline && this.isAttached) {
+          this._tryReconnect();
+        }
+      }
+
+    }
+
+    customElements.define(SiteList.is, SiteList);
+
+  </script>
+
+</dom-module>

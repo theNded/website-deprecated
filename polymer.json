@@ -1,0 +1,31 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/site-app.html",
+  "fragments": [
+    "src/site-list.html",
+    "src/lazy-resources.html"
+  ],
+  "sources": [
+    "src/**/*",
+    "data/**/*",
+    "publications/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "app.yaml",
+    "manifest.json",
+    "bower_components/webcomponentsjs/*"
+  ],
+  "lint": {
+    "rules": ["polymer-2-hybrid"]
+  },
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
+}

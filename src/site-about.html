@@ -6,7 +6,9 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><link rel="import" href="../bower_components/polymer/polymer-element.html">
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="site-data-provider.html">
@@ -69,9 +71,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!--
       site-data-provider provides the {{category}} data for a given category name.
     -->
-    <site-data-provider id="categoryData" category-name="about" category="{{category}}" failure="{{failure}}"></site-data-provider>
+    <site-data-provider
+        id="categoryData"
+        category-name="about"
+        category="{{category}}"
+        failure="{{failure}}"></site-data-provider>
 
-    <site-image alt="[[category.title]]" src="[[category.image]]" placeholder-img="[[category.placeholder]]" class="hero-image"></site-image>
+    <site-image
+        alt="[[category.title]]"
+        src="[[category.image]]"
+        placeholder-img="[[category.placeholder]]" 
+        class="hero-image"></site-image>
 
     <div class="intro">
         <h2>Intro</h2>        
@@ -105,9 +115,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       site-network-warning shows a warning message when the items can't be rendered due
       to network conditions.
     -->
-    <site-network-warning hidden$="[[!failure]]" offline="[[offline]]" on-try-reconnect="_tryReconnect"></site-network-warning>
+    <site-network-warning
+        hidden$="[[!failure]]"
+        offline="[[offline]]"
+        on-try-reconnect="_tryReconnect"></site-network-warning>
 
-  </div></template>
+  </template>
 
   <script>
     class SiteAbout extends Polymer.Element {
