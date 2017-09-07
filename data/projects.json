@@ -1,0 +1,103 @@
+[
+  {
+    "name":"geom_reconstruction",
+    "title":"Geometry Reconstruction",
+    "category":"projects",
+
+    "shortDesc": "Geometry reconstruction is widely required in the cyber age. The digitalization of existing objects and scenes provides unlimitied possibility for humans to simulate, test, and manipulate the physical world. The geometry reconstruction pipelines that are adative, effective and efficient are preferred in casual usages. We are working towards such targets both in <i>low-level</i> data structure and <i>high-level</i> mathematics.",   
+    "subtitle": ["Adaptive Framework for 3D Data Fusion with Sensors Error Prior", 
+                 "Efficient Mesh Representation for Real-time Reconstruction using Spatial-Hashing"],
+    "description": [
+      "<h2>Adaptive Framework for 3D Data Fusion with Sensors Error Prior</h2>",
+      "<p>In reality, geometry reconstruction is based on 3D data coming from 3D sensors. Nowadays there is a plethora of such consumer-level scanners, including Kinect, <a href=\"http://structure.io\">Structure Sensor</a>, Zed camera, etc. It would be attractive if a system owns the ability to fuse data from multiple viewpoints and various sensors. <br>",
+      "In view of this, we built a volumetric generative model to explicitly model the sensor priors along with the geometry priors, and conducted experiments on both indoor and outdoor scenes. Unfortunately, this work was rejected by CVPR 2017 due to unsatisfying experimental results and incomplete prior models. Considering the data structure we used was naive comparatively, which severely limit the accuracy of surface representation, we turned to data structure for better implementations.</p>",
+
+      "<h2>Efficient Mesh Representation for Real-time Reconstruction using Spatial-Hashing</h2>",    
+      "<p>Volumetric data structure is popular in 3D data fusion, especially where Signed Distance Field (SDF) is used. In recent years, spatial-hashing techniques have been introduced in the literature where voxels are only allocated around object surfaces.<br>",
+      "Regarding the demand of efficient on-the-fly mesh generation and rendering, we took one step further and propose a framework that not only stores spatial-hashed distance field, but also integrates mesh triangles. This work is to be submitted to TVCG.</p>"
+    ],
+
+    "videoId": "B8mm36mC63g",
+    "image":"data/images/spatial-hashing.jpg",
+    "largeImage":"data/images/spatial-hashing.jpg"
+  },
+
+  {
+    "name":"appearance_reconstruction",
+    "title": "Appearance Reconstruction",
+    "category": "projects",
+    
+    "shortDesc": "While geometry defines the spatial properties that supports physical effects such as collision in Augmented Reality (AR), appearance directly influences human's perception. The illusion of the virtual world established by 3D reconstruction could never be realistic without attractive appearance. In the project I cooperated with <i>CVG@ETH Zurich</i> to discover the interesting intrinsics of 3D texture.",
+
+    "subtitle":["Multi-view Texture Super-Resolution and Intrinsic Decomposition"],    
+    "description":[
+      "<h2>Multi-view Texture Super-Resolution and Intrinsic Decomposition</h2>",
+      "<p>In prevalent rendering pipelines, textures are mapped onto 3D models with colors. Intuitively, with a higher resolution, the interpolation of color between vertices would preserve more details, leading to higher rendering quality. Besides, providing original color, i.e. albedo, separated from shading, the rendered images would be more realistic by attaching illuminations that are close to reality. <br>",
+      "Considering these factors altogether, we propose a generative model that is composed of super-resolution and intrinsic decomposition. The albedo and shading textures that best explain the input multi-view low-resolution images are estimated via joint optimizations. A prototype has been made to solve the problem by primal-dual algorithms.<br>",
+      "I partly finished the work as a summer intern at <a href=\"https://cvg.ethz.ch/\">CVG@ETH</a>, supervised by Vagia Tsiminaki and Martin Oswald.</p>"
+    ],
+
+    "image":"data/images/texture-sr.png",
+    "largeImage":"data/images/texture-sr.png"
+  },
+
+  {
+    "name":"visual_odometry",
+    "title":"Visual Odometry",
+    "category":"projects",
+        
+    "shortDesc": "3D Reconstruction is always linked with Simultaneous Localization and Mapping (SLAM): in early years, map in SLAM is usually represented by sparse features; recently, coming with faster computation devices, dense map representations are not uncommon; correspondently, the family of direct localization algorithms that takes entire images grows rapidly. Visual Odometry (VO) as an critical subproblem of SLAM is always playing an important role in such studies. Following previous work, we made an extention to enhance the robustness of direct VO in low-texture scenes.",
+
+    "subtitle":["Edge Enhanced Direct Visual Odometry"],    
+    "description":[
+      "<h2>Edge Enhanced Direct Visual Odometry</h2>",
+      "<p>Direct Visual Odometry has been a hot topic; LSD-SLAM is one of the successful systems utilizing such techniques. In its related work, edges are emphasized implicitly by introducing gradient of pixel intensities. In textureless scenes, however, the use of edges should be more weighted, as they are the only source of structure information where features can hardly be extracted elsewhere.<br>",
+      "We paid more attention to explicitly align edges between adjacent images. In order to achieve this target, we designed an edge distance transform producing a dense field for sparse edge points. This transform elegantly bridges the dense (or semi-dense) direct methods and the sparse feature-based methods, allowing optimization algorithm to perform.<br>",
+      "This study has been published in BMVC 2016.</p>"
+    ],
+
+    "videoId":"0SAZwi2F4Ao",
+    "image":"data/images/edge-enhanced.jpg",
+    "largeImage":"data/images/edge-enhanced.jpg"
+  },
+
+  {
+    "name":"digital_cultural_heritage",
+    "title":"Digital Cultural Heritage",
+    "category":"projects",
+       
+    "shortDesc": "Cultural heritages are precious legacy from our ancestors. Many of them are being eroded by time and damaged by the progress of civilazation. It is an innovative attempt to copy them into the cyber space and make them eternal there. Our lab have established connection with one of such cultural heritages, Longmen Grottle, in China. The scanning of most Budda statues has been completed in previou years, while displaying them with powerful Virtual Reality (VR) technologies are being developed.",
+
+    "subtitle":["Longmen Grottle's Digital Display"],    
+    "description":[
+      "<h2>Longmen Grottle's Digital Display</h2>",
+      "<p>As a coder, I laid the foundation of the VR display system for Longmen Grottles in our lab. The project was built with the <a href=\"https://unity3d.com/\">Unity Engine</a>, integrating the early ALPS-VR system (now deprecated) for navigation. At current, the application is distributed on Android devices and displayed inside Cardboard-familiy helmets. <br>",
+      "There have been several extentions by other students in the lab, mainly in the aspect of localization of the helmet, as the original version supports rotation only. One of them depended on external motion capture system; another introduced AprilTags, where I helped to build the native interface for the application. <br>",
+      "We are still considering a better solution to enhance the experience and make it fit for tourists.</p>"
+    ],
+
+    "videoId":"dLG_vCsvg7Q",
+    "image":"data/images/longmen.jpg",
+    "largeImage":"data/images/longmen.jpg"
+  },
+
+  {
+    "name":"vr_times_interaction",
+    "title":"VR × Interaction",
+    "category":"projects",
+    
+    "shortDesc": "VR offers irreplaceable immersive experience for humans. Yet interactions are far from mature, as traditional input peripherals such as keyboard and mouse are occluded by helmet with its inner display. We tried to introduce some natural gesture interactions in the VR context. This project was completed in cooperation with <i>Beijing Samsung Institute of Advanced Technology</i>.",
+
+    "subtitle":["VR Hand Gesture Interaction"],    
+    "description":[
+      "<h2>VR Hand Gesture Interaction</h2>",
+      "<p>The follwing interesting prototypes are constrained by commercial confidential agreements of Samsung, hence I will not go into technical detail. <br>", 
+      "We put a mobile phone inside a Cardboard-family helmet attaching a Leap Motion sensor. Date back to 2015, only the alpha version of Leap Motion's Android API was distributed, and no brackets were available for VR devices, so it took a while to set the configuration. <br>",
+      "Afterwards interactions including selection, zooming, and translation were introduced in several game-oriented applications by interpreting several guestures. The recognition accuracy on Android devices was not perfect, so some theoretical experiments were also conducted on desktops.</p>"
+    ],
+
+    "videoId":"wAi12_oe06o",
+    "image":"data/images/vr-gesture.jpg",
+    "largeImage":"data/images/vr-gesture.jpg"
+  }
+]
