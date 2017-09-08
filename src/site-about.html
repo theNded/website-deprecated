@@ -61,9 +61,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
       }
 
+      a:link, a:visited {
+        font-weight: 800;
+        text-decoration: none;
+        color:darkgoldenrod;
+      }
+
       @media (max-width: 767px) {
+        .intro {
+          text-align: left;
+        }
         .hero-image {
           height: 170px;
+        }
+        .contact-container {
+          @apply --layout-vertical;
+        }
+        .contact {
+          width: 100%;
         }
       }
     </style>
@@ -85,7 +100,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="intro">
         <h2>Intro</h2>        
-        <p>I am Wei Dong (董未 in Chinese character). I am currently a master student at 3DVCR Group in KLMP, Peking University, China. In the summer of 2017, I was a research intern at CVG group at ETH Zurich, Switzerland. I received my bachlor's degree in Peking University in 2015.</p>        
+        <p>I am Wei Dong (董未 in Chinese character). I am currently a master student supervised by <a href="http://www.cis.pku.edu.cn/vision/Visual&Robot/people/zha/">Prof. Hongbin Zha</a> at <a href="http://www.cis.pku.edu.cn/vision/3DVCR/3DVCR_E.html">3D Visual Computing and Robotics Group</a> in <a href="http://www.klmp.pku.edu.cn/">Key Laboratory of Machine Perception</a>, Peking University, China. In the summer of 2017, I was a research intern at <a href="https://cvg.ethz.ch">CVG group</a> at ETH Zurich, Switzerland. I received my bachlor's degree in Peking University in 2015.</p>        
         <p>I always think that human's experience is limited by time and space. The emergance of Virtual Reality (VR) and Augmented Reality (AR) have greatly changed the situation. Hence, I have been focusing on this field both in applications and their underlying theory, from 3D reconstruction to SLAM, since I was an undergraduate student.</p>
         <p>I am not quite a successful researcher up to now considering publications: I have submitted several papers and received a list of rejections. Yet I'm still working hard in the hope that the world will hear my voice one day. Not too far, I hope.</p>
 

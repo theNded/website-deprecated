@@ -27,6 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         width: 80%;
         margin: auto;
+        text-align: justify;
       }
 
       #content {
@@ -58,7 +59,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       #desc p {
-        text-align: justify;
         font-size: 15px;
         margin: 0;
         color: var(--app-secondary-color);
@@ -79,6 +79,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
  
       @media (max-width: 767px) {
+        :host {
+          text-align: left;
+        }
         #content {
           @apply --layout-vertical;
           @apply --layout-center-justified;

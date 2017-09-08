@@ -4,7 +4,7 @@
     "title":"Geometry Reconstruction",
     "category":"projects",
 
-    "shortDesc": "Geometry reconstruction is widely required in the cyber age. The digitalization of existing objects and scenes provides unlimitied possibility for humans to simulate, test, and manipulate the physical world. The geometry reconstruction pipelines that are adative, effective and efficient are preferred in casual usages. We are working towards such targets both in <i>low-level</i> data structure and <i>high-level</i> mathematics.",   
+    "shortDesc": "Geometry reconstruction is widely required in the cyber era. The digitalization of existing objects and scenes provides unlimitied possibility for humans to simulate, test, and manipulate the physical world. The geometry reconstruction pipelines that are adative, effective, and efficient are preferred in consumer-level usages. We are working towards such targets both in <i>low-level</i> data structures and <i>high-level</i> mathematics.",   
     "subtitle": ["Adaptive Framework for 3D Data Fusion with Sensors Error Prior", 
                  "Efficient Mesh Representation for Real-time Reconstruction using Spatial-Hashing"],
     "description": [
@@ -14,7 +14,7 @@
 
       "<h2>Efficient Mesh Representation for Real-time Reconstruction using Spatial-Hashing</h2>",    
       "<p>Volumetric data structure is popular in 3D data fusion, especially where Signed Distance Field (SDF) is used. In recent years, spatial-hashing techniques have been introduced in the literature where voxels are only allocated around object surfaces.<br>",
-      "Regarding the demand of efficient on-the-fly mesh generation and rendering, we took one step further and propose a framework that not only stores spatial-hashed distance field, but also integrates mesh triangles. This work is to be submitted to TVCG.</p>"
+      "Regarding the demand of efficient on-the-fly mesh generation and rendering, we took one step further and propose a framework that not only stores spatial-hashed distance field, but also integrates mesh triangles. This work is to be submitted to ICRA 2018.</p>"
     ],
 
     "videoId": "B8mm36mC63g",
@@ -34,7 +34,7 @@
       "<h2>Multi-view Texture Super-Resolution and Intrinsic Decomposition</h2>",
       "<p>In prevalent rendering pipelines, textures are mapped onto 3D models with colors. Intuitively, with a higher resolution, the interpolation of color between vertices would preserve more details, leading to higher rendering quality. Besides, providing original color, i.e. albedo, separated from shading, the rendered images would be more realistic by attaching illuminations that are close to reality. <br>",
       "Considering these factors altogether, we propose a generative model that is composed of super-resolution and intrinsic decomposition. The albedo and shading textures that best explain the input multi-view low-resolution images are estimated via joint optimizations. A prototype has been made to solve the problem by primal-dual algorithms.<br>",
-      "I partly finished the work as a summer intern at <a href=\"https://cvg.ethz.ch/\">CVG@ETH</a>, supervised by Vagia Tsiminaki and Martin Oswald.</p>"
+      "I partly finished the work as a summer intern at <a href=\"https://cvg.ethz.ch/\">CVG@ETH</a>, supervised by <a href=\"http://people.inf.ethz.ch/vagiat/\">Vagia Tsiminaki</a> and <a href=\"http://people.inf.ethz.ch/moswald/\">Martin R. Oswald</a>.</p>"
     ],
 
     "image":"data/images/texture-sr.png",
