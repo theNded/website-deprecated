@@ -1,0 +1,11 @@
+[
+  {
+    "name":"golden_slumbers",
+    "title":"Golden Slumbers",
+    "shortDesc": "\"Once there was a way to get back homeward\"...",
+    "category":"blog",    
+    "description":"Placeholder for my tour in August...",
+    "image":"data/images/golden_slumber_small.jpg",
+    "largeImage":"data/images/golden_slumber_large.jpg"
+  }
+]

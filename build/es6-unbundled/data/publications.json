@@ -1,0 +1,29 @@
+[
+  {
+    "name":"mesh",
+    "title":"",
+    "shortDesc": "<h2>An Efficient Volumetric Mesh Representation for Real-time Scene Reconstruction using Spatial Hashing</h2><p>Wei Dong, Jieqi Shi, Weijie Tang, Xin Wang, Hongbin Zha<br> <i>Arxiv (submitted to ICRA 2018)</i></p>",
+    "button":"Paper",
+    "category":"publications",
+    "image":"data/images/arxiv.png",
+    "largeImage":"data/images/arxiv.png"
+  },
+  {
+    "name":"eedvo",
+    "title":"",
+    "shortDesc": "<h2>Edge Enhanced Direct Visual Odometry</h2><p>Xin Wang, Wei Dong, Renju Li, Mingcai Zhou, Hongbin Zha<br> <i>BMVC 2016</i></p>",
+    "button":"Paper",
+    "category":"publications",
+    "image":"data/images/bmvc.jpg",
+    "largeImage":"data/images/bmvc.jpg"
+  },
+  {
+    "name":"fusion",
+    "title":"",
+    "shortDesc": "<h2>An Adaptive Framework for Online Data Fusion with Sensor's Error Prior</h2><p>Wei Dong, Xin Wang, Renju Li, Hongbin Zha<br> <i>IWRCV 2016</i></p>",
+    "button": "Slides",
+    "category":"publications",
+    "image":"data/images/iwrcv.png",
+    "largeImage":"data/images/iwrcv.png"
+  }
+]  
