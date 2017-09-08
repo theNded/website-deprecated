@@ -46,13 +46,13 @@
     "title":"Visual Odometry",
     "category":"projects",
         
-    "shortDesc": "3D Reconstruction is always linked with Simultaneous Localization and Mapping (SLAM): in early years, map in SLAM is usually represented by sparse features; recently, coming with faster computation devices, dense map representations are not uncommon; correspondently, the family of direct localization algorithms that takes entire images grows rapidly. Visual Odometry (VO) as an critical subproblem of SLAM is always playing an important role in such studies. Following previous work, we made an extention to enhance the robustness of direct VO in low-texture scenes.",
+    "shortDesc": "3D Reconstruction is always linked with Simultaneous Localization and Mapping (SLAM): in early years, map in SLAM was usually represented by sparse features; recently, coming with faster computation devices, dense map representations have received more attention. Correspondently, the family of direct localization algorithms that take entire images grow rapidly. Visual Odometry (VO) as an critical subproblem of SLAM is always playing an important role in such studies. Following previous work, we made an extention to enhance the robustness of direct VO in low-texture scenes.",
 
     "subtitle":["Edge Enhanced Direct Visual Odometry"],    
     "description":[
       "<h2>Edge Enhanced Direct Visual Odometry</h2>",
       "<p>Direct Visual Odometry has been a hot topic; LSD-SLAM is one of the successful systems utilizing such techniques. In its related work, edges are emphasized implicitly by introducing gradient of pixel intensities. In textureless scenes, however, the use of edges should be more weighted, as they are the only source of structure information where features can hardly be extracted elsewhere.<br>",
-      "We paid more attention to explicitly align edges between adjacent images. In order to achieve this target, we designed an edge distance transform producing a dense field for sparse edge points. This transform elegantly bridges the dense (or semi-dense) direct methods and the sparse feature-based methods, allowing optimization algorithm to perform.<br>",
+      "Xin Wang and I paid more attention to explicitly align edges between adjacent images. In order to achieve this target, we designed an edge distance transform producing a dense field for sparse edge points. This transform elegantly bridges the dense (or semi-dense) direct methods and the sparse feature-based methods, allowing optimization algorithm to perform.<br>",
       "This study has been published in BMVC 2016.</p>"
     ],
 
@@ -72,7 +72,7 @@
     "description":[
       "<h2>Longmen Grottle's Digital Display</h2>",
       "<p>As a coder, I laid the foundation of the VR display system for Longmen Grottles in our lab. The project was built with the <a href=\"https://unity3d.com/\">Unity Engine</a>, integrating the early ALPS-VR system (now deprecated) for navigation. At current, the application is distributed on Android devices and displayed inside Cardboard-familiy helmets. <br>",
-      "There have been several extentions by other students in the lab, mainly in the aspect of localization of the helmet, as the original version supports rotation only. One of them depended on external motion capture system; another introduced AprilTags, where I helped to build the native interface for the application. <br>",
+      "There have been several extentions by other students in the lab, mainly in the aspect of localization of the helmet, as the original version supports rotation only. <a href=\"http://graphics.cs.yale.edu/site/people/zeyu-wang\">Zeyu Wang</a> adapted it to an <a href=\"https://link.springer.com/chapter/10.1007/978-3-319-54427-4_15\">external motion capture system</a>; Dian Shao introduced AprilTags, where I helped to build the native interface for the application. <br>",
       "We are still considering a better solution to enhance the experience and make it fit for tourists.</p>"
     ],
 
