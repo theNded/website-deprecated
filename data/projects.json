@@ -4,7 +4,7 @@
     "title":"Geometry Reconstruction",
     "category":"projects",
 
-    "shortDesc": "Geometry reconstruction is widely required in the cyber era. The digitalization of existing objects and scenes provides unlimitied possibility for humans to simulate, test, and manipulate the physical world. The geometry reconstruction pipelines that are adative, effective, and efficient are preferred in consumer-level usages. We are working towards such targets both in <i>low-level</i> data structures and <i>high-level</i> mathematics.",   
+    "shortDesc": "Geometry reconstruction is widely required in the cyber era. The digitalization of existing objects and scenes provides unlimitied possibility for humans to simulate, test, and manipulate the physical world. The geometry reconstruction pipelines that are adaptive, effective, and efficient are preferred to meet the consumer-level demands. We are working towards such targets both in <i>low-level</i> data structures and <i>high-level</i> mathematics.",   
     "subtitle": ["Adaptive Framework for 3D Data Fusion with Sensors Error Prior", 
                  "Efficient Mesh Representation for Real-time Reconstruction using Spatial-Hashing"],
     "description": [
