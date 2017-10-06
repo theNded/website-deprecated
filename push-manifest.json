@@ -450,6 +450,42 @@
       "type": "document",
       "weight": 1
     },
+    "bower_components/paper-button/paper-button.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-behaviors/paper-button-behavior.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-behaviors/iron-button-state.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-behaviors/iron-control-state.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-behaviors/paper-ripple-behavior.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-ripple/paper-ripple.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-styles/element-styles/paper-material-styles.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-styles/shadow.html": {
+      "type": "document",
+      "weight": 1
+    },
     "src/site-button.html": {
       "type": "document",
       "weight": 1

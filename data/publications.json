@@ -4,6 +4,7 @@
     "title":"",
     "shortDesc": "<h2>An Efficient Volumetric Mesh Representation for Real-time Scene Reconstruction using Spatial Hashing</h2><p><b>Wei Dong</b>, Jieqi Shi, Weijie Tang, Xin Wang, Hongbin Zha<br> <i>Submitted to ICRA 2018</i></p>",
     "button":"Paper",
+    "code": "https://github.com/theNded/MeshHashing",
     "category":"publications",
     "image":"data/images/icra.jpg",
     "largeImage":"data/images/icra.jpg"
