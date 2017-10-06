@@ -5,8 +5,8 @@
     "shortDesc": "<h2>An Efficient Volumetric Mesh Representation for Real-time Scene Reconstruction using Spatial Hashing</h2><p><b>Wei Dong</b>, Jieqi Shi, Weijie Tang, Xin Wang, Hongbin Zha<br> <i>Submitted to ICRA 2018</i></p>",
     "button":"Paper",
     "category":"publications",
-    "image":"data/images/arxiv.png",
-    "largeImage":"data/images/arxiv.png"
+    "image":"data/images/icra.jpg",
+    "largeImage":"data/images/icra.jpg"
   },
   {
     "name":"eedvo",
@@ -23,7 +23,7 @@
     "shortDesc": "<h2>An Adaptive Framework for Online Data Fusion with Sensor's Error Prior</h2><p><b>Wei Dong</b>, Xin Wang, Renju Li, Hongbin Zha<br> <i>IWRCV 2016, Oral</i></p>",
     "button": "Paper",
     "category":"publications",
-    "image":"data/images/iwrcv.png",
-    "largeImage":"data/images/iwrcv.png"
+    "image":"data/images/iwrcv.jpg",
+    "largeImage":"data/images/iwrcv.jpg"
   }
 ]  
