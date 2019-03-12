@@ -1,8 +1,27 @@
 [
   {
+    "name":"gpu",
+    "title":"",
+    "shortDesc": "<h2>GPU Accelerated Robust Scene Reconstruction</h2><p><b>Wei Dong</b>, Jaesik Park, Yi Yang, and Michael Kaess<br> <i>Submitted to IROS 2019</i></p>",
+    "button":"Paper",
+    "code": "https://github.com/theNded/Open3D",
+    "category":"publications",
+    "image":"data/images/gpu-overview.jpg",
+    "largeImage":"data/images/gpu-overview.jpg"
+  },
+  {
+    "name":"psdf",
+    "title":"",
+    "shortDesc": "<h2>PSDF Fusion: Probabilistic Signed Distance Function for On-the-fly 3D Data Fusion and Scene Reconstruction</h2><p><b>Wei Dong</b>, Qiuyuan Wang, Xin Wang, Hongbin Zha<br> <i>ECCV 2018</i></p>",
+    "button":"Paper",
+    "category":"publications",
+    "image":"data/images/psdf.jpg",
+    "largeImage":"data/images/psdf.jpg"
+  },
+  {
     "name":"mesh",
     "title":"",
-    "shortDesc": "<h2>An Efficient Volumetric Mesh Representation for Real-time Scene Reconstruction using Spatial Hashing</h2><p><b>Wei Dong</b>, Jieqi Shi, Weijie Tang, Xin Wang, Hongbin Zha<br> <i>Accepted by ICRA 2018</i></p>",
+    "shortDesc": "<h2>An Efficient Volumetric Mesh Representation for Real-time Scene Reconstruction using Spatial Hashing</h2><p><b>Wei Dong</b>, Jieqi Shi, Weijie Tang, Xin Wang, Hongbin Zha<br> <i>ICRA 2018</i></p>",
     "button":"Paper",
     "code": "https://github.com/theNded/MeshHashing",
     "category":"publications",
@@ -12,7 +31,7 @@
   {
     "name":"eedvo",
     "title":"",
-    "shortDesc": "<h2>Edge Enhanced Direct Visual Odometry</h2><p>Xin Wang, <b>Wei Dong</b>, Renju Li, Mingcai Zhou, Hongbin Zha<br> <i>BMVC 2016, Poster</i></p>",
+    "shortDesc": "<h2>Edge Enhanced Direct Visual Odometry</h2><p>Xin Wang, <b>Wei Dong</b>, Renju Li, Mingcai Zhou, Hongbin Zha<br> <i>BMVC 2016</i></p>",
     "button":"Paper",
     "category":"publications",
     "image":"data/images/bmvc.jpg",

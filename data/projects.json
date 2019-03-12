@@ -1,5 +1,27 @@
 [
   {
+    "name": "rgbd_reconstruction",
+    "title": "Robust Dense RGB-D Reconstruction",
+    "category": "projects",
+
+    "shortDesc": "Dense RGB-D indoor reconstruction gives us existing scenes in detail. Dense SLAM can do a good job in small scale scenes, but is less reliable when we deal with a scene as large as a whole apartment. While it is possible to do it accurate in submap-based state-of-the-art offline systems, it is hard to make it fast. We are exploiting the power of GPU to accelerate the process, while keeping the reconstruction robustness and accuracy.",
+    "subtitle": ["GPU Accelerated Robust Scene Reconstruction"],                 
+    "description": [
+      "<h2>GPU Accelerated Robust Scene Reconstruction</h2>",
+      "<p>We propose a fast and accurate 3D reconstruction system ",
+      "that takes a sequence of RGB-D frames and produces a globally consistent camera trajectory and a dense 3D geometry. ",
+      "We redesign core modules of a state-of-the-art offline reconstruction pipeline to maximally exploit the power of GPU. We introduce GPU accelerated core modules that include RGB-D odometry, geometric feature extraction and matching, point cloud registration, volumetric integration, and mesh extraction.",
+      "Therefore, while being able to reproduce the results of the high-fidelity offline reconstruction system, our system runs more than 10 times faster on average.",
+      "Nearly 10Hz can be achieved in medium size indoor scenes, making our offline system even comparable to online Simultaneous Localization and Mapping (SLAM) systems in terms of the speed. Experimental results show that our system produces more accurate results than several state-of-the-art online systems.",
+      "The system is <a href=\"https://github.com/theNded/Open3D\">open source</a> for the convenience of the community.</p>"
+    ],
+
+    "videoId": "rrkiG4IF1ws",
+    "image":"data/images/robust-recon.jpg",
+    "largeImage":"data/images/robust-recon.jpg"
+  },
+
+  {
     "name":"geom_reconstruction",
     "title":"Geometry Reconstruction",
     "category":"projects",
