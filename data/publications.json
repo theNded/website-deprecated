@@ -2,7 +2,7 @@
   {
     "name":"gpu",
     "title":"",
-    "shortDesc": "<h2>GPU Accelerated Robust Scene Reconstruction</h2><p><b>Wei Dong</b>, Jaesik Park, Yi Yang, and Michael Kaess<br> <i>Submitted to IROS 2019</i></p>",
+    "shortDesc": "<h2>GPU Accelerated Robust Scene Reconstruction</h2><p><b>Wei Dong</b>, Jaesik Park, Yi Yang, and Michael Kaess<br> <i>IROS 2019, Oral</i></p>",
     "button":"Paper",
     "code": "https://github.com/theNded/Open3D",
     "category":"publications",
