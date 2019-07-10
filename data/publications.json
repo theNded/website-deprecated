@@ -1,6 +1,6 @@
 [
   {
-    "name":"gpu",
+    "name":"open3d-gpu",
     "title":"",
     "shortDesc": "<h2>GPU Accelerated Robust Scene Reconstruction</h2><p><b>Wei Dong</b>, Jaesik Park, Yi Yang, and Michael Kaess<br> <i>IROS 2019, Oral</i></p>",
     "button":"Paper",
@@ -8,6 +8,15 @@
     "category":"publications",
     "image":"data/images/gpu-overview.jpg",
     "largeImage":"data/images/gpu-overview.jpg"
+  },
+  {
+    "name":"intrinsic-sr",
+    "title":"",
+    "shortDesc": "<h2>Joint Multi-view Texture Super-resolution and Intrinsic Decomposition</h2><p>Vagia Tsiminaki, <b>Wei Dong</b>, Martin R. Oswald, and Marc Pollefeys<br> <i>BMVC 2019</i></p>",
+    "button":"Paper",
+    "category":"publications",
+    "image":"data/images/intrinsic-sr.jpg",
+    "largeImage":"data/images/intrinsic-sr.jpg"
   },
   {
     "name":"psdf",
@@ -25,8 +34,8 @@
     "button":"Paper",
     "code": "https://github.com/theNded/MeshHashing",
     "category":"publications",
-    "image":"data/images/icra.jpg",
-    "largeImage":"data/images/icra.jpg"
+    "image":"data/images/mesh-hashing.jpg",
+    "largeImage":"data/images/mesh-hashing.jpg"
   },
   {
     "name":"eedvo",
@@ -34,8 +43,8 @@
     "shortDesc": "<h2>Edge Enhanced Direct Visual Odometry</h2><p>Xin Wang, <b>Wei Dong</b>, Renju Li, Mingcai Zhou, Hongbin Zha<br> <i>BMVC 2016</i></p>",
     "button":"Paper",
     "category":"publications",
-    "image":"data/images/bmvc.jpg",
-    "largeImage":"data/images/bmvc.jpg"
+    "image":"data/images/eedvo.jpg",
+    "largeImage":"data/images/eedvo.jpg"
   },
   {
     "name":"fusion",
