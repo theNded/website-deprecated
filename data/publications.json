@@ -2,7 +2,7 @@
   {
     "name":"dgr",
     "title":"",
-    "shortDesc": "<h2>Deep Global Registration</h2><p>Chris Choy, <b>Wei Dong</b>, and Valdlen Koltun<br> <i>CVPR 2020, Oral</i></p>",
+    "shortDesc": "<h2>Deep Global Registration</h2><p>Chris Choy, <b>Wei Dong</b>, and Vladlen Koltun<br> <i>CVPR 2020, Oral</i></p>",
     "button":"Paper",
     "code": "https://github.com/chrischoy/DeepGlobalRegistration",
     "category":"publications",
