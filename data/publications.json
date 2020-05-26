@@ -22,7 +22,7 @@
   {
     "name":"intrinsic-sr",
     "title":"",
-    "shortDesc": "<h2>Joint Multi-view Texture Super-resolution and Intrinsic Decomposition</h2><p>Vagia Tsiminaki, <b>Wei Dong</b>, Martin R. Oswald, and Marc Pollefeys<br> <i>BMVC 2019</i></p>",
+    "shortDesc": "<h2>Joint Multi-view Texture Super-resolution and Intrinsic Decomposition</h2><p>Vagia Tsiminaki, <b>Wei Dong</b>, Martin R. Oswald, and Marc Pollefeys<br> <i>BMVC 2019, Spotlight</I></p>",
     "button":"Paper",
     "category":"publications",
     "image":"data/images/intrinsic-sr.jpg",
